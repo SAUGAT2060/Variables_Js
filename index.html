@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<!-- <body>
+  Write a program to reverse an array: Write a function that reverses the elements of an array without using the built-in reverse() method.
+
+Write a program to find the second largest number in an array: Write a function that returns the second largest number in a given array of numbers.
+
+Write a program to flatten a nested array: Write a function that flattens a nested array (i.e., turns a multi-dimensional array into a single-dimensional one).
+
+Write a program to check if two strings are anagrams: Write a function that checks if two strings are anagrams of each other (i.e., they contain the same characters in a different order).
+
+Write a program to find prime numbers in a given range: Write a function that finds all prime numbers between 1 and a given number n.
+
+Write a program to calculate the sum of digits: Write a function that takes a number and returns the sum of its digits.
+
+Write a program to convert a decimal number to binary: Write a function that converts a given decimal number to binary.
+
+Write a program to merge two sorted arrays: Write a function that takes two sorted arrays and merges them into one sorted array.
+
+Write a program to deep clone an object: Write a function that creates a deep copy of an object (i.e., copies all nested objects as well).
+
+Write a program to implement debouncing: Write a function that implements debouncing. It should limit the rate at which a function is executed, especially useful for handling events like scroll or resize. -->
+
+    <!-- // function reverseArray(){
+    //   const arr=["Sophia","Rana","Magar"];
+    //   console.log(arr.reverse());
+    // } -->
+<script>
+    // 1)Write a program to reverse an array: Write a function that reverses the elements of an array without using the built-in reverse() method.
+
+    
+    // function reverseArray(){
+    //   const arr=[2,3,4,5,6,5];
+    //   let arr1=[];
+    //   // for(let i=arr.length-1;i>=0;i--){
+    //   //   arr1.push(arr[i]);
+    //   // }
+    //   arr1=[2,3,4,5]
+    //   console.log(arr1);
+    // }
+    // reverseArray();
+    // 2)Write a program to find the second largest number in an array: Write a function that returns the second largest number in a given array of numbers.
+
+  function secondLargest(){
+     const array = [12,22,33,44,55,66];
+
+      
+     let max=array[0];
+     let secondMax = array[1];
+     for( let i=0;i<array.length;i++){
+      if(array[i]>max)
+      {
+        secondMax = max;
+        max=array[i];
+      }
+
+     }
+     console.log('The maximum number is: '+max);
+     console.log('The second maximum number is:'+secondMax);
+     
+  }
+  secondLargest();
+</script>
+</body>
+</html>

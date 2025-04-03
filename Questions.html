@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+// 1️⃣ Print "Hello, World!" to the console.
+// 2️⃣ Write a function to check if a number is even or odd.
+// 3️⃣ Write a function that takes two numbers and returns their sum.
+// 4️⃣ Write a function that finds the largest of three numbers.
+// 5️⃣ Reverse a given string without using built-in functions.
+// 6️⃣ Check if a given string is a palindrome.
+// 7️⃣ Find the factorial of a number using recursion.
+// 8️⃣ Print the Fibonacci sequence up to n terms.
+// 9️⃣ Count the number of vowels in a given string.
+// 🔟 Swap two variables without using a third variable.
+
+//1 
+console.log('Hello,World');
+//2
+function addEven(){
+
+  const num=3;
+  if(num%2==0){
+
+    return 'even';
+
+  }else{
+    return 'odd';
+  }
+
+}
+console.log(addEven());
+//3
+function sumOfNums(){
+
+  const num1=parseInt(prompt("Enter the first number please:"));
+  const num2=parseInt(prompt("Enter the second number please:"));
+if(isNaN(num1)|| isNaN(num2)){
+return `Invalid Input ,Please enter the valid number`;
+}
+else{
+  const  sum= (`Total sum = ${num1 + num2}`);
+
+  return sum;
+}
+}
+console.log(sumOfNums());
+
+//4
+// 4️⃣ Write a function that finds the largest of three numbers.
+    function largestAmongThree(){
+      const a = 2;
+      const b = 33 ;
+      const c = 5;
+      if(a>b && a>c){
+        return `${a} is the greatest `;
+      }
+      else if (b>a && b>c){
+        return `${b} is the greatest`;
+      }
+      else{
+        return `${c} is the greatest`;
+      }
+    }
+   document.write(largestAmongThree());
+
+   //using Math.max method
+   function largestAmongThree(){
+      const a = 2;
+      const b = 33 ;
+      const c = 5;
+
+      return Math.max(a,b,c);
+   }
+   document.write(largestAmongThree());
+  // 5️⃣ Reverse a given string without using built-in functions.
+
+    const name=['Saugat','Rana','Magar'];
+    function reverse(){
+       let reversedBaby=[];
+      for(let i = name.length - 1 ; i >=0 ;i--){
+
+        reversedBaby.push(name[i]);
+      }
+      return reversedBaby
+
+    }
+    document.write(reverse());
+
+    // Check if a given string is a palindrome.
+
+    function palin(){
+      const name='nayan';
+      let ultoName="";
+      for(let i = name.length - 1; i >=0 ;i--){
+
+        ultoName += name[i];
+
+      }
+
+      if(ultoName===name){
+        return `The given string ${name} is palindrome`;
+      }
+      else{
+        return `The given string ${name} isn't palindrome`;
+      }
+    }
+    console.log(palin());
+    function palin(){
+     const name='nayan';
+     if (typeof name !== 'string') {
+    return 'The variable "name" is not a string.';
+  }
+      let ultoName = name.split('').reverse().join('');
+
+     if(ultoName===name){
+        return `The given string ${name} is palindrome`;
+      }
+      else{
+        return `The given string ${name} isn't palindrome`;
+      }
+      }
+console.log(palin());
+// Find the factorial of a number using recursion.
+    
+function factorial(num){
+  
+  if(num==0||num==1){
+    return 1;
+  }
+
+  return num* factorial(num-1);
+
+}
+
+console.log(factorial(3));
+
+function factorial(n){
+
+let result =1;
+  for ( i = 1 ; i <= n ; i ++){
+
+    result = result*i;
+  }
+  return result;
+}
+document.write(factorial(3));
+// Print the Fibonacci sequence up to n terms.
+
+let n=prompt("Enter the number:");
+function fibonacci(n){
+
+  if(n==0 ){
+    return 0;
+  }else if (n==1){
+    return 1;
+  }
+  return fibonacci(n-1) + fibonacci(n -2 );
+}
+
+document.write(fibonacci(n));
+
+//  9️⃣ Count the number of vowels in a given string.
+
+function funVowels(){
+    const str="Mayalu";
+
+    const arr= str.split('');
+
+    for(i=0;i<arr.length;i++){
+    if(arr[i]==='a'||arr[i]==='e'|| arr[i]==='i'|| arr[i]==='o'|| arr[i]==='u'){
+        console.log(arr[i]);
+        
+    }
+  }
+}
+funVowels();
+
+// 🔟 Swap two variables without using a third variable.
+
+function swapThird(){
+
+  let a =12;
+  let b=13;
+
+  c=b;
+  b=a;
+  a=c;
+  console.log(a);
+  console.log(b);
+
+ console.log([a,b]=[b,a]);
+//Here the left hand side we are using destructing which means we are extracting values form the array and on the right we are creating an array 
+ 
+}
+swapThird();
+
+
+
+  </script>
+</body>
+</html>
